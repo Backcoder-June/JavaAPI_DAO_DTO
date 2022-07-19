@@ -1,7 +1,6 @@
-package Template_View;
+package Service_View;
 
 import DAO.MemberDAO;
-import DTO.MemberDTO;
 
 import java.util.Scanner;
 

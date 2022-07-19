@@ -1,11 +1,12 @@
-package Main;
+package BackCoder_DAO;
 
-import Service_View.*;
+import BackCoder_DAO.Service.*;
 
 import java.util.Scanner;
 
-public class MemberApplication {
+public class RebootApplication {
     public static void main(String[] args) {
+
 
         while (true) {
 
@@ -19,29 +20,40 @@ public class MemberApplication {
             System.out.print("원하는 메뉴의 번호를 입력하세요 : ");
 
             Scanner sc = new Scanner(System.in);
+
             int menu = sc.nextInt();
 
-            if (menu == 6) { System.exit(0);}
-            else if (menu ==1){
-                MemberInsertView insert = new MemberInsertView();
-                insert.input();
+            if (menu == 6) {
+                System.out.println("이용해 주셔서 감사합니다!");
+                System.exit(0);
+            } else if (menu == 1) {
+                JoinService joinService = new JoinService();
+                joinService.work();
             } else if (menu == 2) {
-                MemberUpdateView update = new MemberUpdateView();
-                update.input();
-            } else if (menu == 3) {
-                MemberDeleteView delete = new MemberDeleteView();
-                delete.input();
+                UpdateService updateService = new UpdateService();
+                updateService.work();
+            }  else if (menu == 3) {
+                DeleteService deleteService = new DeleteService();
+                deleteService.work();
             } else if (menu == 4) {
-                MemberFindView find = new MemberFindView();
-                find.input();
+                FindmeService findmeService = new FindmeService();
+                findmeService.work();
             } else if (menu == 5) {
-                MemberFindAllView findall = new MemberFindAllView();
-                findall.input();
+                FindAllService findAllService = new FindAllService();
+                findAllService.work();
             }
 
 
 
+
+
+
+
+
+
         }
+
+
 
 
 
