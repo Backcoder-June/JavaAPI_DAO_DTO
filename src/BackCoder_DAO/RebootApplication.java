@@ -16,14 +16,15 @@ public class RebootApplication {
             System.out.println("3. 회원 탈퇴");
             System.out.println("4. 내정보 조회");
             System.out.println("5. 회원 리스트 조회");
-            System.out.println("6. 종료");
+            System.out.println("6. 회원 검색 조회");
+            System.out.println("0. 종료");
             System.out.print("원하는 메뉴의 번호를 입력하세요 : ");
 
             Scanner sc = new Scanner(System.in);
 
             int menu = sc.nextInt();
 
-            if (menu == 6) {
+            if (menu == 0) {
                 System.out.println("이용해 주셔서 감사합니다!");
                 System.exit(0);
             } else if (menu == 1) {
@@ -41,6 +42,9 @@ public class RebootApplication {
             } else if (menu == 5) {
                 FindAllService findAllService = new FindAllService();
                 findAllService.work();
+            } else if (menu == 6) {
+                SearchService searchService = new SearchService();
+                searchService.work();
             }
 
 

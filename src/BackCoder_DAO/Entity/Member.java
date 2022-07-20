@@ -2,6 +2,27 @@ package BackCoder_DAO.Entity;
 
 public class Member {
 
+    @Override
+    public String toString() {
+        return "Member{" +
+                "id=" + id +
+                ", pw=" + pw +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
+                ", joindate='" + joindate + '\'' +
+                '}';
+    }
+
+    public String listinfo() {
+        return "Member{" +
+                " name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", joindate='" + joindate + '\'' +
+                '}';
+    }
+
+
 
 
     private int id;

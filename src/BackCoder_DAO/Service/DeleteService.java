@@ -21,12 +21,17 @@ public class DeleteService implements MemberReposit {
         member.setPw(pw);
 
         DAO dao = new DAO();
-
         dao.check(member);
 
 
-        dao.delete(member);
-
+        System.out.print("회원 탈퇴를 진행하시려면 1번, 서비스를 계속 이용하시려면 2번을 입력해 주세요. : ");
+        int choice = sc.nextInt();
+        if (choice == 1) {
+            dao.delete(member);
+        } else if (choice == 2) {
+            System.out.println("회원탈퇴가 취소되었습니다.");
+        } else {
+            System.out.println("잘못된 입력입니다.");}
 
 
 

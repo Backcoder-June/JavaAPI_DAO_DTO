@@ -20,6 +20,7 @@ public class FindmeService implements MemberReposit {
         member.setId(id);
         member.setPw(pw);
 
+
         DAO dao = new DAO();
 
         dao.check(member);
